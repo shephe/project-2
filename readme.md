@@ -1,5 +1,6 @@
+```json
 {
-  "engines": {
+  "engines" : {
     "node": "12.16.2"
   },
   "name": "project2",
@@ -13,10 +14,9 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.1",
-    "method-override": "^3.0.0",
-    "mongoose": "^5.9.15"
-  }
+  "license": "ISC"
 }
+```
+# Remember to add the ENGINE for heroku
+
+echo "node_modules" >> .gitignore
