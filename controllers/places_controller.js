@@ -7,19 +7,37 @@ const Place = require('../models/places')
 
 //Index
 placeController.get('/', (req, res) => {
-  res.send('index page')
+  Place.find({}, (error, allPlaces) => {
+    res.render('Index',
+      {places: allPlaces})
+  })
 })
 
 //New
 placeController.get('/new', (req, res) => {
-  res.send('new page')
+  res.render('New')
 })
 
 //Create
 placeController.post('/', (req, res) => {
-  Place.create(req.body), (error, createdPlace) => {
+  Place.create(req.body, (error, createdPlace) => {
     res.redirect('/places')
-  }
+  }) 
+})
+
+//Delete
+placeController.delete('/:id', (req, res) => {
+  console.log(req.params.id)
+  Place.findByIdAndRemove(req.params.id, (error, data) => {
+    res.redirect('/places')
+  })
+})
+
+//Show
+placeController.get('/:id', (req, res) => {
+  Place.findById(req.params.id, (error, place) => {
+    res.render('Show', {place})
+  })
 })
 
 
