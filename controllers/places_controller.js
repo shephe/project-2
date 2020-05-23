@@ -40,6 +40,19 @@ placeController.get('/:id', (req, res) => {
   })
 })
 
+//Edit
+placeController.get('/edit/:id', (req, res) => {
+  Place.findById(req.params.id, (error, place) => {
+    res.render('Edit', {place})
+  })
+})
+
+//Update
+placeController.put('/edit/:id', (req, res) => {
+  Place.findByIdAndUpdate(req.params.id, req.body, (error, data) => {
+    res.redirect('/places')
+  })
+})
 
 
 module.exports = placeController

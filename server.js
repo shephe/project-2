@@ -4,7 +4,7 @@
 const express = require('express');
 const methodOverride  = require('method-override');
 const mongoose = require ('mongoose');
-const app = express ();
+const app = express();
 const db = mongoose.connection;
 const placeController = require('./controllers/places_controller.js')
 
@@ -61,6 +61,7 @@ app.use('/places', placeController)
 app.get('/' , (req, res) => {
   res.redirect('/places');
 });
+
 //___________________
 //Listener
 //___________________

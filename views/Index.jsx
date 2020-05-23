@@ -2,7 +2,7 @@ const React = require('react');
 
 class Index extends React.Component {
     render() {
-        console.log(this.props)
+        // console.log(this.props)
         const { places } = this.props;
         //can store html in variables
         // const logoutButton = (<form action="/sessions/?_method=delete" method="post">
