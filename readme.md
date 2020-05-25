@@ -23,3 +23,5 @@ echo "node_modules" >> .gitignore
 
 Reference:
 https://stackoverflow.com/questions/13284157/mongoose-schema-property-with-specific-values 
+
+https://upmostly.com/tutorials/react-onclick-event-handling-with-examples

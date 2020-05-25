@@ -1,4 +1,5 @@
 const React = require('react');
+const Layout = require('./Layout')
 
 class Index extends React.Component {
     render() {
@@ -9,21 +10,19 @@ class Index extends React.Component {
         //     <input type="submit" value="Log out"/>
         // </form>)
         return (
-            <div>
-                <nav>
-                    <a href="/places/new">Add a location</a>
-                </nav>
-                
-                <div className="container">
-                   {places.map((place, index) => {
-                       return (
-                           <div className="card" key={index}>
-                               <a href={`/places/${place._id}`}>{place.name}</a>
-                           </div>
-                       )
-                   })}
+            <Layout>
+                <div>
+                    <div className="container">
+                    {places.map((place, index) => {
+                        return (
+                            <div className="card" key={index}>
+                                <a href={`/places/${place._id}`}>{place.name}</a>
+                            </div>
+                        )
+                    })}
+                    </div>
                 </div>
-            </div>
+            </Layout>
         )
     }
 }

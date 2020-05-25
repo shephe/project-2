@@ -45,8 +45,8 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 //___________________
 // View Engine
 //___________________
-app.set('view engine', 'jsx')
-app.engine('jsx', require('express-react-views').createEngine())
+// app.set('view engine', 'jsx')
+// app.engine('jsx', require('express-react-views').createEngine())
 
 //___________________
 // Controllers

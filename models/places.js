@@ -9,7 +9,7 @@ const placeSchema = new Schema({
   keywords: [String],
   website: String,
   description: String,
-  admission: Number,
+  // admission: Number,
   image: String
 })
 
