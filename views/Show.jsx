@@ -6,7 +6,7 @@ class Show extends React.Component {
         const {place} = this.props
         return (
             <Layout>
-            <div>
+            <div className="show">
                 <h1>{place.name}</h1>
                 <h4>{place.quadrant}</h4>
                 <h4>{place.type}</h4>

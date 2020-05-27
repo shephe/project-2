@@ -11,12 +11,23 @@ class Index extends React.Component {
         // </form>)
         return (
             <Layout>
-                <div>
+                <div className="index">
+                    <h2>All Portland Places</h2>
                     <div className="container">
+                        
                     {places.map((place, index) => {
                         return (
                             <div className="card" key={index}>
-                                <a href={`/places/${place._id}`}>{place.name}</a>
+                                <div className="image-wrapper">
+                                    <img className="card-img-top" src={place.image ? place.image : `https://cdn.pixabay.com/photo/2014/08/11/19/26/portland-415957_1280.jpg` }/>
+                                </div>
+                                <div className="card-body">                                
+                                    <a className="name" href={`/places/${place._id}`}>{place.name}</a>
+                                    <div className="row">
+                                        <p>{place.type}</p>
+                                        <p>{place.quadrant}</p>
+                                    </div>
+                                </div>
                             </div>
                         )
                     })}
