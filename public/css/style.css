@@ -150,7 +150,10 @@ nav a:hover {
     width: 85vw;
     
 }
-
+.show img {
+    max-width: 50vw;
+    max-height: 80vh;
+}
 #gray {
     color: var(--main-font-color);
 }
