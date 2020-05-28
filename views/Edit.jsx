@@ -23,7 +23,7 @@ class Edit extends React.Component {
                   Image URL: <input type="text" name="image" value={place.image}/> <br/>
                   Website URL: <input type="text" name="website" value={place.website}/> <br/>
                   Street Address:  <input type="text" name="address" value={place.address}/> <br/>
-                  Type: <input type="text" name="type" value={this.type}/> <br/>
+                  Type: <input type="text" name="type" value={place.type}/> <br/>
                   
                   <div id="keywords">
                   Keywords: <input type="text" name="keywords" value={place.keywords[0]}/> <br/>

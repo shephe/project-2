@@ -17,6 +17,8 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
     --main-font-color: rgb(137, 171, 146);
+    --dark-gray: #444;
+    --light-gray: #666;
     background-color: whitesmoke;
 }
 /* NAVBAR */
@@ -113,6 +115,7 @@ nav a:hover {
     font-size: 1.3rem;
     font-weight: bold;
     color: #444;
+    text-transform: capitalize;
 }
 .index .name:hover {
     text-shadow: 0px 2px 2px #666;
@@ -128,6 +131,78 @@ nav a:hover {
     color: whitesmoke;
     font-weight: bold;
     font-size: 1.2rem;
+    text-transform: capitalize;
 }
 
 /* SHOW PAGE */
+.show h1 {
+    color: var(--dark-gray);
+    text-align: center;
+    text-transform: capitalize;
+    margin: 1rem;
+}
+.show .card {
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    /* padding: 0 30%; */
+    /* border: 2px solid var(--dark-gray); */
+    width: 85vw;
+    
+}
+.show .card-left {
+    /* padding-right: 2rem; */
+}
+#gray {
+    color: var(--main-font-color);
+}
+
+ /* .show .card-right {
+   padding-left: 2rem;
+}  */
+.show .card-right {
+    width: 40vw;
+    padding: 0px 10px;
+}
+/* .show .row h4{
+    display: flex;
+} */
+.show #type {
+    margin-right: 50px;
+    font-size: 1.5rem;
+    color: var(--main-font-color);
+}
+.show #description {
+    padding-top: 2rem;
+}
+.show .keywords {
+    display: flex;
+    justify-content: left;
+    align-content: center;
+    position: absolute;
+    top: 70%;
+}
+.show .keywords p {
+    margin-top: 15px;
+}
+.show .keywords a {
+    margin: 10px;
+    background-color: #888;
+    color: whitesmoke;
+    padding: 5px;  
+    border-radius: 5px;
+}
+.show .buttons {
+    display: flex;
+    position: relative;
+    top: 70%;
+    justify-content: space-between;
+} 
+.show .buttons a, .show .buttons input {
+    background-color: var(--dark-gray);
+    color: var(--main-font-color);
+    padding: 8px;
+    font-size: 1rem;
+    box-shadow: none;
+    vertical-align: center;
+}
