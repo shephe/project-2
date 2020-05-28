@@ -17,19 +17,19 @@ class New extends Component {
     render() {
         return (
             <Layout>
-            <div>
+            <div className="edit">
               <h1>Add new location</h1>
               <form action="/places" method="POST">
                   Name: <input type="text" name="name" /><br/>
-                  Description: <input type="text" name="description" /><br/>
+                  Description: <textarea name="description" /><br/>
                   
                   Quadrant: <br/>
-                  <input type="radio" name="quadrant" value="North"/> North
-                  <input type="radio" name="quadrant" value="Northeast"/>Northeast
-                  <input type="radio" name="quadrant" value="Southeast"/>Southeast
-                  <input type="radio" name="quadrant" value="Northwest"/>Northwest
-                  <input type="radio" name="quadrant" value="Southwest"/>Southwest
-                  <input type="radio" name="quadrant" value="Elsewhere"/>Elsewhere
+                  <input type="radio" name="quadrant" value="North"/> North <br/>
+                  <input type="radio" name="quadrant" value="Northeast"/> Northeast<br/>
+                  <input type="radio" name="quadrant" value="Southeast"/> Southeast<br/>
+                  <input type="radio" name="quadrant" value="Northwest"/> Northwest<br/>
+                  <input type="radio" name="quadrant" value="Southwest"/> Southwest<br/>
+                  <input type="radio" name="quadrant" value="Elsewhere"/> Elsewhere<br/>
                   <br/>
                   Image URL: <input type="text" name="image"/> <br/>
                   Website URL: <input type="text" name="website"/> <br/>

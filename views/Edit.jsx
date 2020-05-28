@@ -10,15 +10,15 @@ class Edit extends React.Component {
                 <h1>Edit {place.name}</h1>
                 <form action={`/places/edit/${place._id}?_method=put`} method="POST">
                   Name: <input type="text" name="name" value={place.name}/><br/>
-                  Description: <input type="text" name="description" value={place.description}/><br/>
+                  Description:  <textarea name="description" value={place.description}/><br/>
                   
                   Quadrant: <br/>
-                  <input type="radio" name="quadrant" value="North" defaultChecked={place.quadrant === "North"? true : false}/> North
-                  <input type="radio" name="quadrant" value="Northeast" defaultChecked={place.quadrant === "Northeast"? true : false}/>Northeast
-                  <input type="radio" name="quadrant" value="Southeast" defaultChecked={place.quadrant === "Southeast"? true : false}/>Southeast
-                  <input type="radio" name="quadrant" value="Northwest" defaultChecked={place.quadrant === "Northwest"? true : false}/>Northwest
-                  <input type="radio" name="quadrant" value="Southwest" defaultChecked={place.quadrant === "Southwest"? true : false}/>Southwest
-                  <input type="radio" name="quadrant" value="Elsewhere" defaultChecked={place.quadrant === "Elsewhere"? true : false}/>Elsewhere
+                  <input type="radio" name="quadrant" value="North" defaultChecked={place.quadrant === "North"? true : false}/> North <br/>
+                  <input type="radio" name="quadrant" value="Northeast" defaultChecked={place.quadrant === "Northeast"? true : false}/> Northeast <br/>
+                  <input type="radio" name="quadrant" value="Southeast" defaultChecked={place.quadrant === "Southeast"? true : false}/> Southeast <br/>
+                  <input type="radio" name="quadrant" value="Northwest" defaultChecked={place.quadrant === "Northwest"? true : false}/> Northwest <br/>
+                  <input type="radio" name="quadrant" value="Southwest" defaultChecked={place.quadrant === "Southwest"? true : false}/> Southwest <br/>
+                  <input type="radio" name="quadrant" value="Elsewhere" defaultChecked={place.quadrant === "Elsewhere"? true : false}/> Elsewhere <br/>
                   <br/>
                   Image URL: <input type="text" name="image" value={place.image}/> <br/>
                   Website URL: <input type="text" name="website" value={place.website}/> <br/>

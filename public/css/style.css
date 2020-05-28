@@ -150,9 +150,7 @@ nav a:hover {
     width: 85vw;
     
 }
-.show .card-left {
-    /* padding-right: 2rem; */
-}
+
 #gray {
     color: var(--main-font-color);
 }
@@ -205,4 +203,29 @@ nav a:hover {
     font-size: 1rem;
     box-shadow: none;
     vertical-align: center;
+}
+.edit {
+    text-align: left;
+    margin: 0 auto;
+    width: fit-content;
+    color: var(--dark-gray);
+    font-weight: bold;
+}
+.edit h1 {
+    text-align: center;
+    margin: 2rem;
+}
+.edit textarea {
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* input {
+    width: 300px;
+    align-items: right;
+} */
+.edit input {
+    font-weight: normal;
+    /* width: 40vw; */
+    /* height: 2rem; */
+    font-size: 1rem;
+    margin-bottom: 10px;
 }
