@@ -10,7 +10,17 @@ const Place = require('../models/places')
 placeController.get('/', (req, res) => {
   Place.find({}, (error, allPlaces) => {
     res.render('Index',
-      {places: allPlaces})
+      {places: allPlaces,
+      title: "All Portland Places"})
+  })
+})
+
+//Quadrant Index
+placeController.get('/quad/:quadrant', (req, res) => {
+  Place.find({quadrant: req.params.quadrant}, (error, quadPlaces) => {
+    res.render('Index',
+      {places: quadPlaces,
+      title: req.params.quadrant})
   })
 })
 

@@ -193,6 +193,7 @@ nav a:hover {
     padding: 5px;  
     border-radius: 5px;
 }
+/* .show .keywords . */
 .show .buttons {
     display: flex;
     position: relative;

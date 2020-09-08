@@ -4,7 +4,7 @@ const Layout = require('./Layout')
 class Index extends React.Component {
     render() {
         // console.log(this.props)
-        const { places } = this.props;
+        const { places, title } = this.props;
         //can store html in variables
         // const logoutButton = (<form action="/sessions/?_method=delete" method="post">
         //     <input type="submit" value="Log out"/>
@@ -12,7 +12,7 @@ class Index extends React.Component {
         return (
             <Layout>
                 <div className="index">
-                    <h2>All Portland Places</h2>
+                    <h2>{title} Portland</h2>
                     <div className="container">
                         
                     {places.map((place, index) => {
