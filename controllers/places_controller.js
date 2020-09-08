@@ -1,7 +1,7 @@
 const express = require('express')
 const placeController = express.Router()
 const Place = require('../models/places')
-const bootstrap = '<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">'
+
 
 
 /****** Routes ******/
@@ -17,7 +17,6 @@ placeController.get('/', (req, res) => {
 //New
 placeController.get('/new', (req, res) => {
   res.render('New',
-  // {styles: bootstrap}
   )
 })
 
