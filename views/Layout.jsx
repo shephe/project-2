@@ -1,6 +1,17 @@
 const React = require('react')
 
 class Layout extends React.Component {
+    constructor(props){
+        super(props)
+        this.state = {
+            isActive: false
+        }
+        this.toggleActive = this.toggleActive.bind(this)
+    }
+    toggleActive(){
+        const currentState = this.state.isActive
+        this.setState({isActive: !currentState})
+    }
     render(){
         return(
             <html>
@@ -17,7 +28,22 @@ class Layout extends React.Component {
                         <h1 id="header"><a href="/places">Day Off PDX</a></h1>
                         <a href="/places">Home</a>
                         <a href="/places/new">Add a new place</a>
-                        <a href="#">Search by quadrant</a>
+                        {/* <a href="#" onClick={}>Search by quadrant</a> */}
+                        <div className="dropdown">
+                            <button 
+                                className='drop-btn'
+                                onClick={this.toggleActive()}
+                                >Search by quadrant</button>
+                            <div className="drop-content"
+                            id={this.state.isActive? "is-active" : ""}>
+                                <a href="/places/quad/North">North</a>
+                                <a href="/places/quad/Northeast">Northeast</a>
+                                <a href="/places/quad/Southeast">Southeast</a>
+                                <a href="/places/quad/Northwest">Northwest</a>
+                                <a href="/places/quad/Southwest">Southwest</a>
+                                <a href="/places/quad/Elsewhere">Elsewhere</a>
+                            </div>
+                        </div>
                         <a id="login" href="#">Log in</a>
 
                     </nav>

@@ -33,20 +33,32 @@ nav {
     background-color: #666;
     border-bottom: 2px solid black;
 }
-a, a:hover {
+
+a, a:hover, .drop-btn:hover, .drop-btn {
     text-decoration: none;
     color: initial;
+    border: none;
 }
-nav a {
+nav a, .drop-btn {
     color: var(--main-font-color);
     padding: 8px;
     margin: 5px;
     font-size: 1.08rem;
+    background-color: #666;
     /* color: whitesmoke; */
 }
-nav a:hover {
+nav a:hover, nav .drop-btn:hover {
     text-shadow: 0px 2px black;
     color: var(--main-font-color)
+}
+nav .dropdown .drop-content {
+    display: none;
+}
+/* nav .dropdown .drop-content  {
+    display: block;
+} */
+nav .dropdown #is-active {
+    display: block;
 }
 #login {
     background-color: #444;
