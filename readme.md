@@ -10,7 +10,7 @@ Functionality to be added:
 - Let users create their own lists
 - Search by keyword, type, quadrant
 - Restrict Edit and Delete to only users
-- Responsive Design
+~~- Responsive Design~~
 - Show street address, website, admission if any
 - Remove empty keyword elements
 - Option to add infinite-ish keywords
